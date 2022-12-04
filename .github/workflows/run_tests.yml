@@ -21,13 +21,13 @@ jobs:
       - name: Run tests
         run: pytest
       - name: Deploy Farm app
-        uses: invi5H/ssh-action@v1
+        uses: appleboy/ssh-action@master
         with:
           SSH_HOST: ${{ secrets.SSH_HOST }}          
           SSH_USER: ${{ secrets.SSH_USER }}
           SSH_KEY: ${{ secrets.SSH_KEY }}
 
-          run: |
+          script: |
             mkdir farm_app
             cd farm_app
             git clone git@github.com:milodepilo/farm.git
