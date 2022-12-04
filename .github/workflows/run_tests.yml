@@ -23,9 +23,9 @@ jobs:
       - name: Deploy Farm app
         uses: appleboy/ssh-action@master
         with:
-          SSH_HOST: ${{ secrets.SSH_HOST }}          
-          SSH_USER: ${{ secrets.SSH_USER }}
-          SSH_KEY: ${{ secrets.SSH_KEY }}
+          host: ${{ secrets.SSH_HOST }}          
+          username: ${{ secrets.SSH_USER }}
+          key: ${{ secrets.SSH_KEY }}
 
           script: |
             mkdir farm_app
