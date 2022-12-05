@@ -27,5 +27,5 @@ jobs:
           username: ${{ secrets.SSH_USERNAME }}
           key: ${{ secrets.SSH_KEY }}          
           script: |
-            mkdir farm
+            git clone git@github.com:milodepilo/farm.git
             
