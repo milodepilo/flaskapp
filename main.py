@@ -12,7 +12,7 @@ def index():
 
 @app.route('/cow')
 def cow():
-    return 'MOoooOo!'
+    return 'MOoooOoooo!'
 
 
 @app.route("/about", methods=["GET"])
