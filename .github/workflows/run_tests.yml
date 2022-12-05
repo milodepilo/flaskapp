@@ -20,13 +20,11 @@ jobs:
         run: pip install -r requirements.txt
       - name: Run tests
         run: pytest
-      - name: Deploy Farm app
+      - name: executing remote ssh commands using ssh key
         uses: appleboy/ssh-action@master
         with:
-          host: ${{ secrets.SSH_HOST }}          
-          username: ${{ secrets.SSH_USER }}
-          passphrase: ${{secrets.SSH_PHRASE}}
-          password: ${{ secrets.PASSWORD }}
-
-          script: |            
-            echo hello!
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.KEY }}          
+          script: whoami
+         
