@@ -26,10 +26,10 @@ jobs:
           host: ${{ secrets.SSH_HOST }} 
           key: ${{ secrets.SSH_KEY }}         
           username: ${{ secrets.SSH_USER }}
-          # passphrase: ${{secrets.SSH_PHRASE}}
+          passphrase: ${{secrets.SSH_PHRASE}}
           
 
           script: |            
             cd farm
-            git clone https://github.com/milodepilo/farm.git
+            git pull git@github.com:milodepilo/farm.git
             echo "Deployment succesfull"
