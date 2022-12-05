@@ -29,6 +29,6 @@ jobs:
           password: ${{ secrets.PASSWORD }}
 
           script: |            
-            cd farm
-            git pull git@github.com:milodepilo/farm.git
+            sudo cd farm
+            sudo git pull git@github.com:milodepilo/farm.git
             echo "Deployment succesfull"
