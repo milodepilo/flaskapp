@@ -27,5 +27,5 @@ jobs:
           username: ${{ secrets.SSH_USERNAME }}
           key: ${{ secrets.SSH_KEY }}          
           script: |
-            git pull git@github.com:milodepilo/farm.git
+            git pull farm
             
