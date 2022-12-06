@@ -4,8 +4,6 @@ from flask import Flask, render_template, redirect, url_for
 # Create a Flask app inside `app`
 app = Flask(__name__)
 
-# Assign a function to be called when the path `/` is requested
-
 
 @app.route("/home", methods=["GET"])
 def home():
