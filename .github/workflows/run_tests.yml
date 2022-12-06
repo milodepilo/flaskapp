@@ -28,5 +28,5 @@ jobs:
           key: ${{ secrets.SSH_KEY }}          
           script: |    
             cd farm        
-            git pull farm
+            git pull git@github.com:milodepilo/farm.git
             
