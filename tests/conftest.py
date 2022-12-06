@@ -1,5 +1,4 @@
 import os
-from time import sleep
 import tempfile
 import pytest
 from farmblog import create_app
