@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
 <h2>About</h2>
-<img src="/templates/imgs/schaapfbeelding.jpg" alt="that's me skaapie" width="500" height="600">
+<img src="{{url_for('static', filename='farm\static\imgs\schaapfbeelding.jpg')}}" alt="that's me skaapie" width="500"
+    height="600">
 {% endblock content %} -
