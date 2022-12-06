@@ -15,3 +15,7 @@ h1 {
 .boldText {
     font-weight: bold;
 }
+
+img {
+    display: inline-block;
+}
