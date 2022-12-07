@@ -18,7 +18,7 @@ def close_db(e=None):
     db = g.pop('db', None)
 
     if db is not None:
-        db.close
+        db.close()
 
 
 def init_db():
@@ -30,8 +30,9 @@ def init_db():
 
 @click.command('init-db')
 def init_db_command():
+    """Clear the existing data and create new tables."""
     init_db()
-    click.echo('initialized db')
+    click.echo('initialized the database.')
 
 
 def init_app(app):
