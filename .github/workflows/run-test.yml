@@ -26,6 +26,13 @@ jobs:
 
       - name: run pytest
         run: pytest
-        
 
-
+      - name: executing remote ssh commands using password
+        uses: appleboy/ssh-action@v0.1.6
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          key: ${{secrets.SSH_KEY}}
+        script: |
+          cd ~/farmblog/flaskapp
+          
