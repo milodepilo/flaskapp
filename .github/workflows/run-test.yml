@@ -35,5 +35,7 @@ jobs:
           key: ${{secrets.SSH_KEY}}
           script: |
             cd ~/farmblog/flaskapp
-            pwd
+            git pull origin
+            echo ${{secrets.PASSWORD}} | sudo -S systemctl restart farmblog
+
 
