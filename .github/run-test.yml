@@ -1,8 +1,8 @@
 name: deploy
 run-name: "testing and deploying"
 
-on: [push]  
-  branches: [ blog ]
+on: workflow_dispatch
+
     
 
   
