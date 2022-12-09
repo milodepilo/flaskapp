@@ -24,4 +24,8 @@ jobs:
       - name: install app
         run: pip install -e .
 
-      
+      - name: run pytest
+        run: pytest
+        
+
+
