@@ -34,5 +34,5 @@ jobs:
           username: ${{ secrets.USERNAME }}
           key: ${{secrets.SSH_KEY}}
           script: |
-          cd ~/farmblog/flaskapp
+            cd ~/farmblog/flaskapp
 
