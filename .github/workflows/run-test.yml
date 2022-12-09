@@ -19,9 +19,9 @@ jobs:
           python-version: '3.10.8'
         
       - name: install dependencies
-        uses: pip install -r requirements.txt
+        run: pip install -r requirements.txt
 
       - name: install app
-        uses: pip install -e .
+        run: pip install -e .
 
       
