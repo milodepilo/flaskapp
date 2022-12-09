@@ -1,0 +1,26 @@
+name: deploy
+
+on:
+  push:
+    branches:
+      - blog
+
+  
+jobs:
+  runs--on: ubuntu-latest
+  steps:
+    - name: Chechout
+      uses: actions/checkout@v3
+
+    - name: install python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10.8'
+      
+    - name: install dependencies
+      uses: pip install -r requirements.txt
+
+    - name: install app
+      uses: pip install -e .
+
+      
