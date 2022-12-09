@@ -1,4 +1,5 @@
 name: deploy
+run-name: "testing and deploying"
 
 on: [push]  
   branches: [ master ]
@@ -6,6 +7,7 @@ on: [push]
 
   
 jobs:
+  install-python-and-dependencies:
   runs--on: ubuntu-latest
   steps:
     - name: Chechout
