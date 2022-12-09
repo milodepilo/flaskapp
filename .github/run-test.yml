@@ -2,7 +2,7 @@ name: deploy
 run-name: "testing and deploying"
 
 on: [push]  
-  branches: [ master ]
+  branches: [ blog ]
     
 
   
