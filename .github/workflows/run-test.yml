@@ -1,14 +1,14 @@
 name: deploy
 run-name: "testing and deploying"
 
-on: workflow_dispatch
+on: push
 
     
 
   
 jobs:
   install-python-and-dependencies:
-  runs--on: ubuntu-latest
+  runs-on: ubuntu-latest
   steps:
     - name: Chechout
       uses: actions/checkout@v3
