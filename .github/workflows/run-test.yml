@@ -1,0 +1,41 @@
+name: deploy
+run-name: "testing and deploying"
+
+on: push
+
+    
+
+  
+jobs:
+  install-python-and-dependencies:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Chechout
+        uses: actions/checkout@v3
+
+      - name: install python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10.8'
+        
+      - name: install dependencies
+        run: pip install -r requirements.txt
+
+      - name: install app
+        run: pip install -e .
+
+      - name: run pytest
+        run: pytest
+
+      - name: executing remote ssh commands using password
+        uses: appleboy/ssh-action@v0.1.6
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USERNAME }}
+          key: ${{secrets.SSH_KEY}}
+          script: |
+            cd ~/farmblog/flaskapp
+            git pull origin
+            echo ${{secrets.PASSWORD}} | sudo -S systemctl restart farmblog
+
+
